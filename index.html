@@ -17,9 +17,9 @@
   .hud-item { display: flex; flex-direction: column; align-items: center; min-width: 48px; }
   .hud-label { font-size: 9px; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.5px; }
   .hud-val { font-size: 15px; font-weight: 600; color: #fff; line-height: 1.2; }
-  #health-wrap { flex: 1; }
-  #health-bg { background: rgba(255,255,255,0.15); border-radius: 4px; height: 8px; overflow: hidden; }
-  #health-fill { height: 8px; border-radius: 4px; transition: width 0.15s, background 0.3s; }
+  #health-wrap { flex: 1; align-items: stretch !important; min-width: 80px; }
+  #health-bg { background: rgba(255,255,255,0.15); border-radius: 4px; height: 10px; overflow: hidden; width: 100%; }
+  #health-fill { height: 10px; border-radius: 4px; transition: width 0.15s, background 0.3s; width: 100%; }
   #overlay {
     position: absolute; inset: 0;
     display: flex; flex-direction: column;
@@ -60,7 +60,7 @@
     <span class="hud-label">Скорость</span>
     <span class="hud-val" id="h-speed">×1.0</span>
   </div>
-  <div class="hud-item" id="health-wrap">
+  <div id="health-wrap" style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:80px;">
     <span class="hud-label">Здоровье</span>
     <div id="health-bg"><div id="health-fill" style="width:100%;background:#4caf50;"></div></div>
   </div>
